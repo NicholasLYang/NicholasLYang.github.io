@@ -1,8 +1,16 @@
 @media screen and (max-width: 600px) {
     .content {
-        padding-left: 3%;
-        padding-right: 3%;
+        min-width: 100px;
+        padding: 5px;
         padding-top: 75%;
+    }
+    ul {
+        list-style-type: none;
+        line-height: 1.3em;
+    }
+    li {
+        margin-bottom: 10px;
+        margin-left: -20px;
     }
     header {
         padding-top: 40px;
