@@ -5,6 +5,9 @@
         padding-top: 40%;
     }
     header {
+        padding-top: 0px;
+    }
+    header::after{
         padding-top: 50px;
     }
     .headshot {
