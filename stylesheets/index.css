@@ -2,6 +2,8 @@ header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
     position: relative;
+    font-family: Aileron;
+    font-color: #F7CE3E;
 }
 
 header::after{
@@ -12,7 +14,7 @@ header::after{
     height: 100%;
     width:100%;
     transform: skewY(-4deg);
-    background: red;
+    background: #0A1612;
     transform-origin: bottom left;
     z-index: -1;
 }
@@ -20,3 +22,17 @@ header::after{
 
 body{margin:0; background: #efefef;}
 div{padding: 4em 4em 0;}
+
+@font-face {
+    font-family: Simplifica;
+    src: url("../NicholasLYang.github.io/fonts/SIMPLIFICA.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url("../NicholasLYang.github.io/fonts/Aileron/Aileron-Regular.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
