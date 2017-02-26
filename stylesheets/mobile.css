@@ -1,15 +1,13 @@
 @media screen and (max-width: 600px) {
     .content {
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 40%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 60%;
     }
     header {
-        padding-top: 0px;
+        padding-top: 40px;
     }
-    header::after.shrink{
-        padding-top: 50px;
-    }
+
     .headshot {
         width: 100%;
         min-width: 250px;
