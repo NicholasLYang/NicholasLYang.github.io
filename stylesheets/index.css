@@ -76,7 +76,9 @@ a.header-link {
 
 .headshot {
     width: 60%;
+    min-width: 400px;
 }
+
 .centered-div {
     display:flex;
     justify-content:center;
