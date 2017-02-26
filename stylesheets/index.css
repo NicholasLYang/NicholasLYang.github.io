@@ -2,6 +2,7 @@ header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
     position: relative;
+    margin-bottom: -100px;
 }
 
 header::after{
@@ -23,8 +24,8 @@ header::after{
 }
 
 .bio {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
     color: #1A2930;
 }
 
