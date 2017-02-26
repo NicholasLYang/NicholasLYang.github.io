@@ -2,5 +2,12 @@
     .content {
         padding-left: 5%;
         padding-right: 5%;
+        padding-top: 40%;
+    }
+    header {
+        padding-top: 50px;
+    }
+    .headshot {
+        width: 100%;
     }
 }
