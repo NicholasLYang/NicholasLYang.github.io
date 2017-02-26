@@ -2,12 +2,6 @@ header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
-    color: #F7CE3E;
-}
-
-.title {
-    font-size: 2em;
 }
 
 header::after{
@@ -22,6 +16,40 @@ header::after{
     transform-origin: bottom left;
     z-index: -1;
 }
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    color: #F7CE3E;
+}
+
+.bio {
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #1A2930;
+}
+
+.headshot {
+    width: 40%;
+}
+.centered-div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+
+body {
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.25em;
+    background-color: #C5C1C0;
+}
+
 
 
 body{margin:0; background: #efefef;}
