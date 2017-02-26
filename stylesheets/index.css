@@ -2,7 +2,10 @@ header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
     position: relative;
-    margin-bottom: -100px;
+    margin-bottom: -50px;
+    margin-left: -100px;
+    margin-top: -100px;
+    padding-top: 100px;
 }
 
 header::after{
@@ -11,26 +14,64 @@ header::after{
     top:0;
     left:0;
     height: 100%;
-    width:100%;
+    width: 100%;
     transform: skewY(-4deg);
     background: #0A1612;
     transform-origin: bottom left;
     z-index: -1;
 }
 
-.title {
+div.shrink {
+    padding-top: 5%;
+    font-size: 0.8em;
+}
+
+div {
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+span.hide {
+    display: none;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+
+.fixed {
+    position: fixed;
+    width:100%;
+}
+div.title {
+    margin-top: -10%;
     font-family: 'Montserrat', sans-serif;
     color: #F7CE3E;
 }
 
-.bio {
+
+a.header-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #F7CE3E;
+    transform: skewY(-4deg);
+    transform-origin: bottom left;
+    margin-right: 10%;
+}
+
+.content {
     padding-left: 15%;
     padding-right: 15%;
+}
+
+.header-bar {
+
+}
+
+.bio {
     color: #1A2930;
 }
 
 .headshot {
-    width: 40%;
+    width: 60%;
 }
 .centered-div {
     display:flex;
