@@ -1,11 +1,12 @@
 header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
-    position: relative;
-    margin-bottom: -50px;
-    margin-left: -100px;
-    margin-top: -100px;
-    padding-top: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 
 header::after{
@@ -21,8 +22,8 @@ header::after{
     z-index: -1;
 }
 
-header::after.shrink{
-    height: 60%;
+header.shrink{
+    padding-top: 5%;
 }
 
 div.shrink {

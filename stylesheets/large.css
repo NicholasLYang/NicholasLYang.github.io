@@ -1,0 +1,8 @@
+@media screen and (min-width: 2000px) {
+    header {
+        padding-top: 120px;
+    }
+    header.shrink {
+        padding-top: 120px;
+    }
+}
