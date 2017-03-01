@@ -4,6 +4,7 @@ header{
     position: fixed;
     top: 0%;
     padding-top: 5%;
+    padding-bottom: 5%;
     right: 0;
     left: 0;
     -webkit-transition: all 0.8s ease;
@@ -40,7 +41,7 @@ div {
     transition: all 0.8s ease;
 }
 
-span.hide {
+.hide {
     display: none;
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
@@ -69,6 +70,7 @@ a.header-link {
 .content {
     padding: 15%;
     padding-top: 18%;
+    padding-bottom: 20%;
 }
 
 
@@ -87,6 +89,9 @@ a.header-link {
     align-items:center;
 }
 
+ul.content-list {
+    padding-left: 10%;
+}
 h1 {
     font-size: 2em;
 }

@@ -4,8 +4,17 @@
   src="https://code.jquery.com/jquery-3.1.1.js"
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="javascripts/index.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Slabo+27px" rel="stylesheet">
+
+  <!-- My stuff -->
+  <script type="text/javascript" src="javascripts/index.js"></script>
   <link type="text/css" href="stylesheets/index.css" rel="stylesheet">
   <link type="text/css" href="stylesheets/mobile.css" rel="stylesheet">
   <link type="text/css" href="stylesheets/large.css" rel="stylesheet">
@@ -30,8 +39,18 @@
       <a class="header-link" href="#accounts"> Accounts </a>
       <a class="header-link" href="#contactme"> Contact Me </a>
     </span>
+    <div class="centered-div">
+      <ul class="header-list">
+        <li> <a class="header-link" href="#aboutme"> About Me </a>
+        <li> <a class="header-link" href="#projects"> My Projects </a>
+        <li> <a class="header-link" href="#tutoring"> Tutoring </a>
+        <li> <a class="header-link" href="#accounts"> Accounts </a>
+        <li> <a class="header-link" href="#contactme"> Contact Me </a>
+      </ul>
+    </div>
 </header>
 </div>
+
 <div class="content">
 <div id="aboutme">
   <h2> About Me </h2>
@@ -47,18 +66,18 @@
       </a>. I try to focus on clean, readable code. While intelligent and tricky code may seem cool while writing it, it quickly
       becomes tedious or even painful to maintain. However, I'm far from an expert on this subject. If you want more references,
       I'd suggest the following resources:
-      <ul>
+    </p>
+      <ul class="content-list">
         <li> The Pragmatic Programmer by Andy Hunt and David Thomas
         <li> Code Complete
         <li> Clean Code
         <li> <a href="https://blog.codinghorror.com"> Coding Horror </a>
       </ul>
-    </p>
   </div>
 <div id="projects">
   <h2> Projects </h2>
     Here are some of my projects. Some are deployed.
-    <ul>
+    <ul class="content-list">
       <li> My blog, <a href="https://github.com/NicholasLYang/blog"> Horribly Underqualified </a>.
         Deployed <a href="https://horriblyunderqualified.com"> here </a>
       <li> My HackNYU project, <a href="https://github.com/NicholasLYang/fashion-tree"> Fashion Tree</a>.
@@ -94,7 +113,7 @@
 </div>
 <div id="accounts">
   <h2> Accounts </h2>
-  <ul>
+  <ul class="content-list">
     <li> <a href="https://github.com/NicholasLYang"> Github </a>
     <li> <a href="https://www.linkedin.com/in/nicholaslyang/"> LinkedIn </a>
     <li> <a href="https://www.upwork.com/o/profiles/users/_~01e6599c9fb739f92f/"> UpWork </a>
