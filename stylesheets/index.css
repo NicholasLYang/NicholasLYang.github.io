@@ -2,8 +2,8 @@ header{
     margin: 0; padding: 2em 5em 4em; color: #efefef;
     overflow:hidden;
     position: fixed;
-    top: 1%;
-    padding-top: 4%;
+    top: 0%;
+    padding-top: 5%;
     right: 0;
     left: 0;
     -webkit-transition: all 0.8s ease;
