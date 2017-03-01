@@ -1,4 +1,5 @@
 @media screen and (max-width: 600px) {
+
     .content {
         min-width: 100px;
         padding: 5px;
@@ -14,6 +15,9 @@
     }
     header {
         padding-top: 40px;
+    }
+    header.shrink {
+        padding-bottom: 2%;
     }
 
     .headshot {

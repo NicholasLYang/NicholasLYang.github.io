@@ -17,6 +17,7 @@ header::after{
     left:0;
     height: 90%;
     width: 100%;
+    padding-bottom: 1%;
     transform: skewY(-4deg);
     background: #0A1612;
     transform-origin: bottom left;
@@ -25,7 +26,9 @@ header::after{
 
 header.shrink{
     padding-top: 5%;
+    padding-bottom: 1%;
 }
+
 
 div.shrink {
     padding-top: 5%;
@@ -60,7 +63,7 @@ a.header-link {
     color: #F7CE3E;
     transform: skewY(-4deg);
     transform-origin: bottom left;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 
 .content {
