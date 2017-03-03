@@ -4,8 +4,10 @@
         min-width: 100px;
         padding: 5px;
         padding-top: 75%;
+        padding-bottom: 50%;
     }
     ul {
+        margin-top: -40px;
         list-style-type: none;
         line-height: 1.3em;
     }
