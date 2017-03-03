@@ -88,6 +88,9 @@ a.header-link {
     justify-content:center;
     align-items:center;
 }
+.centered-text {
+    text-align:center;
+}
 
 ul.content-list {
     padding-left: 10%;
