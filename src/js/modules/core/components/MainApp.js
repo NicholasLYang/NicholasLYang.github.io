@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import { Link, withRouter } from 'react-router-dom';
 import connect from "react-redux/lib/connect/connect";
@@ -54,9 +53,6 @@ const styles = {
 };
 
 class MainApp extends PureComponent {
-  static contextTypes = {
-    store: PropTypes.object.isRequired
-  };
   onResizeWindow = () => {
     this.props.onResizeWindow();
   };
@@ -93,7 +89,6 @@ class MainApp extends PureComponent {
 
 const VisibleMainApp = connect(
   (state, ownProps) => ({
-    language: state.core.language,
     viewportWidth: state.core.viewportWidth,
     viewportHeight: state.core.viewportHeight
   }),
