@@ -23,6 +23,7 @@ const styles = {
   headerLink: {
     padding: "10px",
     textDecoration: "none",
+    fontSize: "1.45em",
     color: "grey"
   },
   headerText: {
