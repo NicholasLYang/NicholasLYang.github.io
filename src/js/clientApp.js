@@ -13,4 +13,5 @@ import { VERSION } from './versionInfo'
 
 console.log('appVersion ->', VERSION);
 
-ReactDOM.render((<AppContainer><RoutingApp/></AppContainer>), document.getElementById('app'));
+ReactDOM.render((<AppContainer><RoutingApp/></AppContainer>),
+  document.getElementById('app'));

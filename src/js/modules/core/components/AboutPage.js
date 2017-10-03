@@ -1,35 +1,39 @@
 import React, { Component } from "react";
 import injectSheet from "react-jss";
+import Fader from "./Fader";
+import { connect } from "react-redux";
 
 const styles = {
   about: {
-    opacity: props => props.opacity,
-    transition: "opacity 5s"
+    maxWidth: "500px"
   }
 };
 
-const About = ({ classes }) =>
-  <div className={classes.about}>This is an about page</div>;
+const AboutPage = ({ classes }) =>
+  <Fader>
+    <div className={classes.about}>
+      <h2> About </h2>
+      <h3> I am... </h3>
+      <p>A student at NYU, studying Mathematics and Computer Science.</p>
 
-const StyledAbout = injectSheet(styles)(About);
+      <p>
+        A native New Yorker. I went to Stuyvesant High School and graduated in
+        2016.
+      </p>
 
-class AboutPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMounting: true
-    };
-  }
-  componentDidMount() {
-    this.setState({ isMounting: false });
-  }
+      <p>
+        A developer with experience in React, Redux, Ruby on Rails, C++, Java,
+        Python and <a href="https://github.com/NicholasLYang">more </a>
+      </p>
 
-  render() {
-    console.log(this.state.isMounting);
-    const opacity = this.state.isMounting ? 0 : 1;
-    console.log(opacity);
-    return <StyledAbout opacity={opacity} />;
-  }
-}
+      <p>
+        A tutor in Mathematics, Physics, and Computer Science.
+      </p>
+    </div>
+  </Fader>;
 
-export default AboutPage;
+const mapStateToProps = state => ({
+  isFading: state.core.isFading
+});
+
+export default connect(mapStateToProps)(injectSheet(styles)(AboutPage));
