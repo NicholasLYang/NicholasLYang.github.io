@@ -5,19 +5,29 @@ import { connect } from "react-redux";
 
 const styles = {
   about: {
-    maxWidth: "500px"
+    maxWidth: "500px",
+    padding: "50px"
+  },
+  title: {
+    fontFamily: "'Source Serif Pro', serif",
+    fontSize: "3em"
+  },
+  '@media (max-width: 500px)': {
+    title: {
+      fontSize: "2em"
+    }
   }
 };
 
 const AboutPage = ({ classes }) =>
   <Fader>
     <div className={classes.about}>
-      <h2> About </h2>
+      <h2 className={classes.title}> About </h2>
       <h3> I am... </h3>
       <p>A student at NYU, studying Mathematics and Computer Science.</p>
 
       <p>
-        A native New Yorker. I went to Stuyvesant High School and graduated in
+        A native New Yorker. I attended Stuyvesant High School and graduated in
         2016.
       </p>
 
@@ -26,8 +36,19 @@ const AboutPage = ({ classes }) =>
         Python and <a href="https://github.com/NicholasLYang">more </a>
       </p>
 
+      <p>A tutor in Mathematics, Physics, and Computer Science.</p>
       <p>
-        A tutor in Mathematics, Physics, and Computer Science.
+        A film lover. Some of my favorite films include Badlands, Ida, The Third
+        Man and Yojimbo.
+      </p>
+
+      <p>
+        Obsessed with food. I love searching out good, inexpensive food.
+        I also love cooking and learning how to make new dishes
+      </p>
+
+      <p>
+        An avid traveler. I've been to 18 countries, and hope to go to many more
       </p>
     </div>
   </Fader>;

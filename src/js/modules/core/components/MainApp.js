@@ -1,17 +1,11 @@
 import React, { PureComponent } from "react";
+import connect from "react-redux/lib/connect/connect";
+import { refreshWindowDimensions } from "./../actions";
 import injectSheet from "react-jss";
 import { withRouter } from "react-router-dom";
-import connect from "react-redux/lib/connect/connect";
-import Header from "./Header"
-import { refreshWindowDimensions } from "./../actions";
+import Header from "./Header";
 
 const styles = {
-  appWrapper: {
-    minHeight: "100%",
-    margin: "0px auto",
-    display: "flex",
-    flexDirection: "row"
-  },
   mainWrapper: {
     minHeight: "100%",
     margin: "0px auto",
@@ -35,7 +29,7 @@ const styles = {
     lineHeight: "1.5em"
   },
   mainContent: {
-    flex: "4 0 auto",
+    flex: "4 0 auto"
   },
   appFooter: {
     height: "40px",
@@ -55,15 +49,12 @@ class MainApp extends PureComponent {
   }
   render() {
     const { classes } = this.props;
-
     return (
-      <div className={classes.appWrapper}>
-        <div className={classes.mainWrapper}>
-          <Header />
-          <div className={classes.mainContent}>
-            <div className={classes.mainContainer}>
-              {this.props.children}
-            </div>
+      <div className={classes.mainWrapper}>
+        <Header />
+        <div className={classes.mainContent}>
+          <div className={classes.mainContainer}>
+            {this.props.children}
           </div>
         </div>
       </div>

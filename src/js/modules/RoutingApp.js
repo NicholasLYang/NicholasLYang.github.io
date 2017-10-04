@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Route from "react-router-dom/Route";
 import AboutPage from "./core/components/AboutPage";
 import HomePage from "./core/components/HomePage";
+import ProjectsPage from "./core/components/ProjectsPage";
+import ResumePage from "./core/components/ResumePage";
 import appHistory from "tools/appHistory";
 import MainApp from "./core/components/MainApp";
 import ConnectedRouter from "react-router-redux/ConnectedRouter";
@@ -16,6 +18,8 @@ class RoutingApp extends Component {
           <MainApp>
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
+            <Route path="/projects" component={ProjectsPage} />
+            <Route path="/resume" component={ResumePage} />
           </MainApp>
         </ConnectedRouter>
       </Provider>

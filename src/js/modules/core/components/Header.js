@@ -1,5 +1,5 @@
 import React from "react";
-import { transitionRoute } from "../actions";
+import Link from "./Link"
 import { connect } from "react-redux";
 import injectSheet from "react-jss";
 
@@ -7,74 +7,56 @@ const styles = {
   mainHeader: {
     display: "flex",
     flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "top",
     justifyContent: "space-evenly",
     flex: "1 0 auto",
     margin: "5%",
-    fontFamily: "'Cormorant Garamond', serif"
+    fontFamily: "'Source Serif Pro', serif"
   },
   headerLinks: {
     display: "flex",
     flexDirection: "row",
-    alignItems: "top",
-    justifyContent: "center",
+    alignItems: "baseline",
+    justifyContent: "flex-end",
+    paddingRight: "5%",
     flex: "1 0 auto"
   },
   headerLink: {
     padding: "10px",
-    textDecoration: "none",
     fontSize: "1.45em",
     color: "grey"
   },
   headerText: {
     flexGrow: "2",
+    fontSize: "4em",
+    textDecoration: "none",
+    color: "black",
+  },
+  '@media (max-width: 500px)': {
+    headerText: {
+      fontSize: "2.5em"
+    }
   }
 };
 
-const HeaderLink = ({ classes, children, to, transitionRoute }) =>
-  <a
-    href={to}
-    onClick={event => {
-      event.preventDefault();
-      transitionRoute(to);
-    }}
-    className={classes.headerLink}
-  >
-    {children}
-  </a>;
 
-const Header = ({ classes, transitionRoute }) =>
+const Header = ({ classes }) =>
   <div className={classes.mainHeader}>
-    <h1 onClick={() => transitionRoute("/")} className={classes.headerText}>
-      Nicholas Yang
-    </h1>
+    <Link to="/">
+      <h1 className={classes.headerText}>Nicholas Yang</h1>
+    </Link>
     <div className={classes.headerLinks}>
-      <HeaderLink
-        transitionRoute={transitionRoute}
-        classes={classes}
-        to="/about"
-      >
-        About
-      </HeaderLink>
-      <HeaderLink
-        transitionRoute={transitionRoute}
-        classes={classes}
-        to="/projects"
-      >
-        Projects
-      </HeaderLink>
-      <HeaderLink
-        transitionRoute={transitionRoute}
-        classes={classes}
-        to="/resume"
-      >
-        Resume
-      </HeaderLink>
+      <Link to="/about">
+        <div className={classes.headerLink}>About</div>
+      </Link>
+      <Link className={classes.headerLink} to="/projects">
+        <div className={classes.headerLink}>Projects</div>
+      </Link>
+      <Link className={classes.headerLink} to="/resume">
+        <div className={classes.headerLink}>Resume</div>
+      </Link>
     </div>
   </div>;
 
-const mapDispatchToProps = dispatch => ({
-  transitionRoute: route => dispatch(transitionRoute(route))
-});
-
-export default connect(null, mapDispatchToProps)(injectSheet(styles)(Header));
+export default injectSheet(styles)(Header);

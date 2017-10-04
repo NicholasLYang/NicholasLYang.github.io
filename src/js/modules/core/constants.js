@@ -3,3 +3,4 @@ export default {
 };
 
 export const FADE_DURATION = 750;
+export const INTRO_DURATION = FADE_DURATION * 2;
