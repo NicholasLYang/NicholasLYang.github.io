@@ -9,26 +9,21 @@ const styles = {
   mainWrapper: {
     minHeight: "100%",
     margin: "0px auto",
-    display: "flex",
-    flexDirection: "column",
-    flex: "1 0 auto"
   },
   contentWrapper: {
     maxWidth: "720px",
     minWidth: "360px",
     margin: "0 auto"
   },
-  mainContainer: {
+  mainContent: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flex: "1 0 auto",
-    flexDirection: "column",
+    flexDirection: "row",
     fontFamily: "'Proza Libre', sans-serif",
     fontSize: "1.25em",
-    lineHeight: "1.5em"
-  },
-  mainContent: {
+    lineHeight: "1.5em",
     flex: "4 0 auto"
   },
   appFooter: {
@@ -53,9 +48,7 @@ class MainApp extends PureComponent {
       <div className={classes.mainWrapper}>
         <Header />
         <div className={classes.mainContent}>
-          <div className={classes.mainContainer}>
-            {this.props.children}
-          </div>
+          {this.props.children}
         </div>
       </div>
     );

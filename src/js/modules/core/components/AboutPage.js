@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 const styles = {
   about: {
     maxWidth: "500px",
-    padding: "50px"
   },
   title: {
     fontFamily: "'Source Serif Pro', serif",
@@ -14,7 +13,11 @@ const styles = {
   },
   '@media (max-width: 500px)': {
     title: {
-      fontSize: "2em"
+      fontSize: "2em",
+    },
+    about: {
+      paddingLeft: "50px",
+      paddingRight: "50px"
     }
   }
 };

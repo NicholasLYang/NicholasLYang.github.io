@@ -4,7 +4,7 @@ import injectSheet from "react-jss";
 
 const styles = {
   warning: {
-    padding: "20px"
+    padding: "25px"
   },
   projectRow: {
     display: "flex",
@@ -13,10 +13,10 @@ const styles = {
 };
 const ProjectsPage = ({ classes }) =>
   <Fader>
-    <div className={classes.warning}>
-      {" "}Still under construction. Please check out my {" "}
-        <a href="https://github.com/NicholasLYang">GitHub</a>  for now.
-    </div>
+      <div className={classes.warning}>
+      Still under construction. Please check out my {" "}
+      <a href="https://github.com/NicholasLYang">GitHub</a>  for now.
+      </div>
   </Fader>;
 
 export default injectSheet(styles)(ProjectsPage);
