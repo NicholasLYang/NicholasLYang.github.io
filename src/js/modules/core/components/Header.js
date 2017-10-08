@@ -26,7 +26,7 @@ const styles = {
   link: {
     padding: "10px",
     fontSize: "1.45em",
-    color: "grey"
+    color: "black"
   },
   masthead: {
     flexGrow: "2",

@@ -1,5 +1,4 @@
 import React from "react";
-import PDF from "react-pdf-js";
 import injectSheet from "react-jss";
 
 const styles = {
@@ -9,7 +8,7 @@ const styles = {
 };
 const ResumePage = ({ classes }) =>
   <div className={classes.resume}>
-    <PDF file="resume.pdf" scale={1.5}/>
+    <a href="/resume.pdf"> Download Resume </a>
   </div>;
 
 export default injectSheet(styles)(ResumePage);

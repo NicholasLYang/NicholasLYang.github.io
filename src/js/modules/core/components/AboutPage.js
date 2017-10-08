@@ -5,15 +5,21 @@ import { connect } from "react-redux";
 
 const styles = {
   about: {
-    maxWidth: "500px",
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    maxWidth: "500px"
+  },
+  headshot: {
+    maxWidth: "100%"
   },
   title: {
     fontFamily: "'Source Serif Pro', serif",
     fontSize: "3em"
   },
-  '@media (max-width: 500px)': {
+  "@media (max-width: 500px)": {
     title: {
-      fontSize: "2em",
+      fontSize: "2em"
     },
     about: {
       paddingLeft: "50px",
@@ -26,6 +32,7 @@ const AboutPage = ({ classes }) =>
   <Fader>
     <div className={classes.about}>
       <h2 className={classes.title}> About </h2>
+      <img className={classes.headshot} src="/images/Headshot.jpg" />
       <h3> I am... </h3>
       <p>A student at NYU, studying Mathematics and Computer Science.</p>
 
@@ -35,8 +42,9 @@ const AboutPage = ({ classes }) =>
       </p>
 
       <p>
-        A developer with experience in React, Redux, Ruby on Rails, C++, Java,
-        Python and <a href="https://github.com/NicholasLYang">more </a>
+        A developer with experience in JavaScript (ES6), React, Redux, Ruby on
+        Rails, C++, Java, Python and{" "}
+        <a href="https://github.com/NicholasLYang">more </a>
       </p>
 
       <p>A tutor in Mathematics, Physics, and Computer Science.</p>
@@ -46,8 +54,8 @@ const AboutPage = ({ classes }) =>
       </p>
 
       <p>
-        Obsessed with food. I love searching out good, inexpensive food.
-        I also love cooking and learning how to make new dishes
+        Obsessed with food. I love searching out good, inexpensive food. I also
+        love cooking and learning how to make new dishes
       </p>
 
       <p>
