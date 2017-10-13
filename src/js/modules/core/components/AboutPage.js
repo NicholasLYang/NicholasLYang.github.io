@@ -8,10 +8,19 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    maxWidth: "500px"
+    alignItems: "flex-start",
+      maxWidth: "500px",
+      paddingDown: "5%"
+  },
+  headshotContainer: {
+    flex: "1",
+    flexShrink: "2",
+    maxWidth: "100%",
+    minWidth: "50%"
   },
   headshot: {
-    maxWidth: "100%"
+    maxWidth: "100%",
+    objectFit: "contain"
   },
   title: {
     fontFamily: "'Source Serif Pro', serif",
@@ -32,7 +41,9 @@ const AboutPage = ({ classes }) =>
   <Fader>
     <div className={classes.about}>
       <h2 className={classes.title}> About </h2>
-      <img className={classes.headshot} src="/images/Headshot.jpg" />
+      <div className={classes.headshotContainer}>
+        <img className={classes.headshot} src="/images/Headshot.jpg" />
+      </div>
       <h3> I am... </h3>
       <p>A student at NYU, studying Mathematics and Computer Science.</p>
 
@@ -44,7 +55,7 @@ const AboutPage = ({ classes }) =>
       <p>
         A developer with experience in JavaScript (ES6), React, Redux, Ruby on
         Rails, C++, Java, Python and{" "}
-        <a href="https://github.com/NicholasLYang">more </a>
+        <a href="https://github.com/NicholasLYang">more</a>.
       </p>
 
       <p>A tutor in Mathematics, Physics, and Computer Science.</p>
@@ -55,11 +66,11 @@ const AboutPage = ({ classes }) =>
 
       <p>
         Obsessed with food. I love searching out good, inexpensive food. I also
-        love cooking and learning how to make new dishes
+        love cooking and learning how to make new dishes.
       </p>
 
       <p>
-        An avid traveler. I've been to 18 countries, and hope to go to many more
+        An avid traveler. I've been to 18 countries, and hope to go to many more.
       </p>
     </div>
   </Fader>;
