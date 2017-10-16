@@ -64,6 +64,9 @@ html, body
     }
 }
 
+h2 {
+    font-family: 'Source Serif Pro', serif;
+}
 /* fix for auto-complete yellow bg */
 input:-webkit-autofill
 {

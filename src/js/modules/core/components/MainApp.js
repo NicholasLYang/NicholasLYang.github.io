@@ -24,7 +24,8 @@ const styles = {
     fontFamily: "'Proza Libre', sans-serif",
     fontSize: "1.25em",
     lineHeight: "1.5em",
-    flex: "4 0 auto"
+    flex: "4 0 auto",
+    paddingDown: "5%"
   },
   appFooter: {
     height: "40px",

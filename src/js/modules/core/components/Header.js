@@ -18,6 +18,7 @@ const styles = {
   routes: {
     display: "flex",
     flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "baseline",
     justifyContent: "flex-end",
     paddingRight: "5%",
@@ -37,6 +38,11 @@ const styles = {
   '@media (max-width: 500px)': {
     masthead: {
       fontSize: "2.5em"
+    },
+    routes: {
+      paddingLeft: "20px",
+      paddingRight: "20px",
+      justifyContent: "center"
     }
   }
 };
@@ -52,6 +58,9 @@ const Header = ({ classes }) =>
     <div className={classes.routes}>
       <Link to="/about">
         <div className={classes.link}>About</div>
+      </Link>
+      <Link to="/blog">
+        <div className={classes.link}>Blog</div>
       </Link>
       <Link to="/projects">
         <div className={classes.link}>Projects</div>

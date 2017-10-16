@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import injectSheet from "react-jss";
 import Fader from "./Fader";
 import { connect } from "react-redux";
@@ -9,8 +9,7 @@ const styles = {
     flexDirection: "column",
     flexWrap: "wrap",
     alignItems: "flex-start",
-      maxWidth: "500px",
-      paddingDown: "5%"
+    maxWidth: "500px",
   },
   headshotContainer: {
     flex: "1",
@@ -23,8 +22,7 @@ const styles = {
     objectFit: "contain"
   },
   title: {
-    fontFamily: "'Source Serif Pro', serif",
-    fontSize: "3em"
+    fontSize: "3em",
   },
   "@media (max-width: 500px)": {
     title: {
