@@ -5,7 +5,7 @@ const ContactPage = () =>
   <Fader>
     <div>
       <h2> Contact </h2>
-      <p>My email: nick@nicholasyang.com</p>
+      <p> nick@nicholasyang.com</p>
       <p>
         <a href="https://github.com/NicholasLYang"> GitHub </a>
       </p>

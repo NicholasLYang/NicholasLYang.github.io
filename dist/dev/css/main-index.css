@@ -74,3 +74,6 @@ h2 {
     font-family: 'Source Serif Pro', serif;
     font-size: 2em;
 }
+a {
+    text-decoration: none;
+}
