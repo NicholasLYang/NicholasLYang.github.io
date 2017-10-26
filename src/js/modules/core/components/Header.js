@@ -53,6 +53,9 @@ const Header = ({ classes }) =>
       <Link to="/about">
         <div className={classes.link}>About</div>
       </Link>
+      <Link to="/contact">
+        <div className={classes.link}>Contact</div>
+      </Link>
       <Link to="/projects">
         <div className={classes.link}>Projects</div>
       </Link>

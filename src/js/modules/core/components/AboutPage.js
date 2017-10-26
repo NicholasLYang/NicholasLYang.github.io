@@ -22,10 +22,6 @@ const styles = {
     maxWidth: "100%",
     objectFit: "contain"
   },
-  title: {
-    fontFamily: "'Source Serif Pro', serif",
-    fontSize: "3em"
-  },
   "@media (max-width: 500px)": {
     title: {
       fontSize: "2em"

@@ -2,6 +2,7 @@ import Provider from "react-redux/lib/components/Provider";
 import React, { Component } from "react";
 import Route from "react-router-dom/Route";
 import AboutPage from "./core/components/AboutPage";
+import ContactPage from "./core/components/ContactPage";
 import HomePage from "./core/components/HomePage";
 import ProjectsPage from "./core/components/ProjectsPage";
 import ResumePage from "./core/components/ResumePage";
@@ -18,6 +19,7 @@ class RoutingApp extends Component {
           <MainApp>
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
             <Route path="/projects" component={ProjectsPage} />
             <Route path="/resume" component={ResumePage} />
           </MainApp>
