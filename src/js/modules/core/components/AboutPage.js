@@ -54,15 +54,15 @@ const AboutPage = ({ classes }) =>
         <a href="https://github.com/NicholasLYang">more</a>.
       </p>
 
+      <p>
+        A food lover. I love searching out good, inexpensive food. I also
+        love cooking and learning how to make new dishes.
+      </p>
+
       <p>A tutor in Mathematics, Physics, and Computer Science.</p>
       <p>
         A film lover. Some of my favorite films include Badlands, Ida, The Third
         Man and Yojimbo.
-      </p>
-
-      <p>
-        Obsessed with food. I love searching out good, inexpensive food. I also
-        love cooking and learning how to make new dishes.
       </p>
 
       <p>
