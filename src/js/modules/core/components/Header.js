@@ -20,8 +20,8 @@ const styles = {
     flexDirection: "row",
     alignItems: "baseline",
     justifyContent: "flex-end",
-    paddingRight: "5%",
-    flex: "1 0 auto"
+    flex: "1 0 auto",
+    flexWrap: "wrap"
   },
   link: {
     padding: "10px",
@@ -37,6 +37,10 @@ const styles = {
   '@media (max-width: 500px)': {
     masthead: {
       fontSize: "2.5em"
+    },
+    routes: {
+      justifyContent: "center",
+      maxWidth: "300px"
     }
   }
 };
