@@ -1,7 +1,9 @@
 import React from "react";
-import Post from "./Post";
-import Fader from "../../core/components/Fader"
+import Fader from "../../core/components/Fader";
 import injectSheet from "react-jss";
+import Article from "./Article";
+import ArticlePreviews from "./ArticlePreviews";
+import { Link } from "react-router-dom"
 
 const styles = {
   blog: {
@@ -10,9 +12,6 @@ const styles = {
     flexWrap: "wrap",
     alignItems: "flex-start",
     maxWidth: "500px"
-  },
-  blogTitle: {
-    fontSize: "3em",
   },
   "@media (max-width: 500px)": {
     blogTitle: {
@@ -25,12 +24,20 @@ const styles = {
   }
 };
 
-const BlogPage = ({ classes }) =>
-  <Fader>
-  <div className={classes.blog}>
-    <h2 className={classes.blogTitle}> Blog </h2>
-    <Post />
-  </div>
-  </Fader>;
+const BlogPage = ({ children, classes, match }) => {
+  return (
+    <Fader>
+      <div className={classes.blog}>
+        <Link to="/blog">
+          <h2 className={classes.blogTitle}> Blog </h2>
+        </Link>
+        {match.params.id
+          ? <Article id={match.params.id} />
+          : <ArticlePreviews />}
+        {children}
+      </div>
+    </Fader>
+  );
+};
 
 export default injectSheet(styles)(BlogPage);

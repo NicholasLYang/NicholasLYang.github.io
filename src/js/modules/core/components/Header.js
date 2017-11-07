@@ -18,11 +18,10 @@ const styles = {
   routes: {
     display: "flex",
     flexDirection: "row",
-    flexWrap: "wrap",
     alignItems: "baseline",
     justifyContent: "flex-end",
-    paddingRight: "5%",
-    flex: "1 0 auto"
+    flex: "1 0 auto",
+    flexWrap: "wrap"
   },
   link: {
     padding: "10px",
@@ -40,9 +39,8 @@ const styles = {
       fontSize: "2.5em"
     },
     routes: {
-      paddingLeft: "20px",
-      paddingRight: "20px",
-      justifyContent: "center"
+      justifyContent: "center",
+      maxWidth: "300px"
     }
   }
 };
@@ -62,12 +60,15 @@ const Header = ({ classes }) =>
       <Link to="/blog">
         <div className={classes.link}>Blog</div>
       </Link>
+      <Link to="/contact">
+        <div className={classes.link}>Contact</div>
+      </Link>
       <Link to="/projects">
         <div className={classes.link}>Projects</div>
       </Link>
-      <Link to="/resume">
-        <div className={classes.link}>Resume</div>
-      </Link>
+        <Link to="/resume">
+          <div className={classes.link}>Resume</div>
+        </Link>
     </div>
   </div>;
 
