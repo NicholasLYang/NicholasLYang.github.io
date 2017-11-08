@@ -5,7 +5,10 @@ import { transitionRoute } from "../actions";
 
 const styles = {
   link: {
-    textDecoration: "none"
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline"
+    }
   }
 };
 

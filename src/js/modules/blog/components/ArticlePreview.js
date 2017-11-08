@@ -1,15 +1,27 @@
-import React from "react"
-import { Link} from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
+import injectSheet from "react-jss";
 
-const ArticlePreview = ({ id, title, body }) => (
+const styles = {
+  title: {
+    lineHeight: "1.3",
+    color: "black",
+    "&:hover": {
+      textDecoration: "underline"
+    }
+  }
+};
+
+const ArticlePreview = ({ classes, id, title, body }) =>
   <div>
     <Link to={`/blog/` + id}>
-      <h2>
-        {title}
-      </h2>
+      <div className={classes.title}>
+        <h2>
+          {title}
+        </h2>
+      </div>
     </Link>
-    <div dangerouslySetInnerHTML={{__html: body}}/>
-  </div>
-)
+    <div dangerouslySetInnerHTML={{ __html: body }} />
+  </div>;
 
-export default ArticlePreview;
+export default injectSheet(styles)(ArticlePreview);

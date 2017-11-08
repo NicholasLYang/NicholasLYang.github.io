@@ -13,6 +13,12 @@ const styles = {
     alignItems: "flex-start",
     maxWidth: "500px"
   },
+  blogTitle: {
+    color: "black",
+    "&:hover": {
+      textDecoration: "underline"
+    }
+  },
   "@media (max-width: 500px)": {
     blogTitle: {
       fontSize: "2em"

@@ -20,7 +20,7 @@ import store from "../store";
 const client = new ApolloClient({
   // By default, this client will send queries to the
   //  `/graphql` endpoint on the same host
-  link: new HttpLink({ uri: "http://localhost:3000/graphql" }),
+  link: new HttpLink({ uri: "https://staging.horriblyunderqualified.com/graphql" }),
   cache: new InMemoryCache()
 });
 class RoutingApp extends Component {
