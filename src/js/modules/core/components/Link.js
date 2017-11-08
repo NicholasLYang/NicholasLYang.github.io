@@ -7,7 +7,8 @@ const styles = {
   link: {
     textDecoration: "none",
     "&:hover": {
-      textDecoration: "underline"
+      textDecoration: "underline",
+      textDecorationColor: "black"
     }
   }
 };
