@@ -13,7 +13,10 @@ const styles = {
     flex: "1 0 auto",
     margin: "5%",
     marginBottom: "2%",
-    fontFamily: "'Source Serif Pro', serif"
+    fontFamily: "'Source Serif Pro', serif",
+    '&:hover': {
+      textDecorationColor: "black"
+    }
   },
   routes: {
     display: "flex",
