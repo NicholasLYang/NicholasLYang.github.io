@@ -6,6 +6,8 @@ import Link from "./Link";
 const styles = {
   about: {
     display: "flex",
+    fontSize: "1.1em",
+    lineHeight: "1.3em",
     flexDirection: "column",
     flexWrap: "wrap",
     alignItems: "flex-start",
@@ -57,7 +59,7 @@ const AboutPage = ({ classes }) => (
       <p>
         A programming language nerd. I'm obsessed with learning new programming
         languages, such as Rust, Haskell, OCaml and Scheme. My goal is to design
-        my own language sometime soon.
+        my own language in the near future.
       </p>
       <p>
         A food lover. I love searching out good, inexpensive food. I also love
@@ -69,7 +71,7 @@ const AboutPage = ({ classes }) => (
         <Link to="/contact">Contact me</Link> if interested
       </p>
       <p>
-        A film lover. Some of my favorite films include Badlannds, Ida, The
+        A film lover. Some of my favorite films include Badlands, Ida, The
         Third Man and Yojimbo.
       </p>
 
