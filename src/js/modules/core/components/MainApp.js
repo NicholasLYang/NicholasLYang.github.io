@@ -1,10 +1,8 @@
 import React, { PureComponent } from "react";
 import connect from "react-redux/lib/connect/connect";
-import { refreshWindowDimensions } from "./../actions";
 import injectSheet from "react-jss";
 import { withRouter } from "react-router-dom";
 import Header from "./Header";
-import Link from './Link'
 
 const styles = {
   mainWrapper: {
@@ -51,11 +49,7 @@ const VisibleMainApp = connect(
   state => ({
     location: state.router.location.pathname
   }),
-  dispatch => ({
-    onResizeWindow: () => {
-      dispatch(refreshWindowDimensions());
-    }
-  })
+  null
 )(injectSheet(styles)(MainApp));
 
 export default withRouter(VisibleMainApp);
