@@ -10,6 +10,7 @@ import appHistory from "tools/appHistory";
 import MainApp from "./core/components/MainApp";
 import ConnectedRouter from "react-router-redux/ConnectedRouter";
 import store from "../store";
+import ReadingListPage from './core/components/ReadingListPage'
 
 class RoutingApp extends Component {
   render() {
@@ -21,6 +22,7 @@ class RoutingApp extends Component {
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
             <Route path="/projects" component={ProjectsPage} />
+            <Route path="/reading" component={ReadingListPage} />
             <Route path="/resume" component={ResumePage} />
           </MainApp>
         </ConnectedRouter>

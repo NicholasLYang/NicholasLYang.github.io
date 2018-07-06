@@ -14,6 +14,7 @@ const styles = {
   },
   imageText: {
     opacity: "0",
+    color: "black",
     position: "absolute",
     top: "65%",
     left: "35%",

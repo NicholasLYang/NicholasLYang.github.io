@@ -9,7 +9,7 @@ const styles = {
   }
 };
 
-const Link = ({ classes, children, to, transitionRoute }) =>
+const Link = ({ classes, children, to, transitionRoute, ...props }) =>
   <a
     href={to}
     onClick={event => {
@@ -17,6 +17,7 @@ const Link = ({ classes, children, to, transitionRoute }) =>
       transitionRoute(to);
     }}
     className={classes.link}
+    {...props}
   >
     {children}
   </a>;

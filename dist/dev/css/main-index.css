@@ -5,7 +5,7 @@ html, body
     height     : 100%;
     min-width  : 360px !important;
     margin     : 0 auto;
-    background-color : #ffffff;
+    background-color : #f7f7ff;
 }
 
 #app
@@ -71,7 +71,7 @@ input:-webkit-autofill
     outline            : none;
 }
 h2 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Proza Libre', serif;
     font-size: 2em;
 }
 a {

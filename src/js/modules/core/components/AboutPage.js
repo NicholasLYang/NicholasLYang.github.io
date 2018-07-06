@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import injectSheet from "react-jss";
 import Fader from "./Fader";
-import { connect } from "react-redux";
+import Link from "./Link";
 
 const styles = {
   about: {
@@ -9,8 +9,8 @@ const styles = {
     flexDirection: "column",
     flexWrap: "wrap",
     alignItems: "flex-start",
-      maxWidth: "500px",
-      paddingDown: "5%"
+    maxWidth: "500px",
+    paddingDown: "5%"
   },
   headshotContainer: {
     flex: "1",
@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-const AboutPage = ({ classes }) =>
+const AboutPage = ({ classes }) => (
   <Fader>
     <div className={classes.about}>
       <h2 className={classes.title}> About </h2>
@@ -55,24 +55,30 @@ const AboutPage = ({ classes }) =>
       </p>
 
       <p>
-        A food lover. I love searching out good, inexpensive food. I also
-        love cooking and learning how to make new dishes.
+        A programming language nerd. I'm obsessed with learning new programming
+        languages, such as Rust, Haskell, OCaml and Scheme. My goal is to design
+        my own language sometime soon.
+      </p>
+      <p>
+        A food lover. I love searching out good, inexpensive food. I also love
+        cooking and learning how to make new dishes.
       </p>
 
-      <p>A tutor in Mathematics, Physics, and Computer Science.</p>
       <p>
-        A film lover. Some of my favorite films include Badlands, Ida, The Third
-        Man and Yojimbo.
+        A tutor in Mathematics, Physics, and Computer Science. {" "}
+        <Link to="/contact">Contact me</Link> if interested
+      </p>
+      <p>
+        A film lover. Some of my favorite films include Badlannds, Ida, The
+        Third Man and Yojimbo.
       </p>
 
       <p>
-        An avid traveler. I've been to 18 countries, and hope to go to many more.
+        An avid traveler. I've been to 20 countries, and hope to go to many
+        more.
       </p>
     </div>
-  </Fader>;
+  </Fader>
+);
 
-const mapStateToProps = state => ({
-  isFading: state.core.isFading
-});
-
-export default connect(mapStateToProps)(injectSheet(styles)(AboutPage));
+export default injectSheet(styles)(AboutPage);

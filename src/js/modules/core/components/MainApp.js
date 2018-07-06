@@ -4,11 +4,12 @@ import { refreshWindowDimensions } from "./../actions";
 import injectSheet from "react-jss";
 import { withRouter } from "react-router-dom";
 import Header from "./Header";
+import Link from './Link'
 
 const styles = {
   mainWrapper: {
     minHeight: "100%",
-    margin: "0px auto",
+    margin: "0px auto"
   },
   contentWrapper: {
     maxWidth: "720px",
@@ -21,34 +22,25 @@ const styles = {
     justifyContent: "center",
     flex: "1 0 auto",
     flexDirection: "row",
-    fontFamily: "'Proza Libre', sans-serif",
+    fontFamily: "'Source Sans Pro', sans-serif",
     fontSize: "1.25em",
-    lineHeight: "1.5em",
-    flex: "4 0 auto"
+    lineHeight: "1.5em"
   },
   appFooter: {
     height: "40px",
     textAlign: "center"
-  }
+  },
 };
 
 class MainApp extends PureComponent {
-  onResizeWindow = () => {
-    this.props.onResizeWindow();
-  };
-  componentDidMount() {
-    window.addEventListener("resize", this.onResizeWindow);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.onResizeWindow);
-  }
   render() {
-    const { classes } = this.props;
+    const { classes, location } = this.props;
+    console.log(location);
     return (
-      <div className={classes.mainWrapper}>
-        <Header />
-        <div className={classes.mainContent}>
-          {this.props.children}
+      <div>
+        <div className={classes.mainWrapper}>
+          <Header isHome={location === "/"}/>
+          <div className={classes.mainContent}>{this.props.children}</div>
         </div>
       </div>
     );
@@ -56,9 +48,8 @@ class MainApp extends PureComponent {
 }
 
 const VisibleMainApp = connect(
-  (state, ownProps) => ({
-    viewportWidth: state.core.viewportWidth,
-    viewportHeight: state.core.viewportHeight
+  state => ({
+    location: state.router.location.pathname
   }),
   dispatch => ({
     onResizeWindow: () => {

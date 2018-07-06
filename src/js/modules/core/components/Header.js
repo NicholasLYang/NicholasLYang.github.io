@@ -1,43 +1,32 @@
 import React from "react";
-import Link from "./Link"
-import { connect } from "react-redux";
+import Link from "./Link";
 import injectSheet from "react-jss";
+import { Route, Switch } from "react-router-dom";
+import HeaderLinks from "./HeaderLinks";
 
 const styles = {
   mainHeader: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap",
     alignItems: "flex-start",
     justifyContent: "space-evenly",
     flex: "1 0 auto",
     margin: "5%",
+    marginTop: "0",
     marginBottom: "2%",
-    fontFamily: "'Source Serif Pro', serif",
-    '&:hover': {
+    fontFamily: "'Source Sans Pro', serif",
+    "&:hover": {
       textDecorationColor: "black"
     }
-  },
-  routes: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "baseline",
-    justifyContent: "flex-end",
-    flex: "1 0 auto",
-    flexWrap: "wrap"
-  },
-  link: {
-    padding: "10px",
-    fontSize: "1.45em",
-    color: "black"
   },
   masthead: {
     flexGrow: "2",
     fontSize: "4em",
     textDecoration: "none",
-    color: "black",
+    color: "black"
   },
-  '@media (max-width: 500px)': {
+  "@media (max-width: 500px)": {
     masthead: {
       fontSize: "2.5em"
     },
@@ -48,28 +37,15 @@ const styles = {
   }
 };
 
-
-const Header = ({ classes }) =>
+const Header = ({ classes, isHome }) => (
   <div className={classes.mainHeader}>
     <div>
       <Link to="/">
         <h1 className={classes.masthead}>Nicholas Yang</h1>
       </Link>
+      {!isHome && <HeaderLinks />}
     </div>
-    <div className={classes.routes}>
-      <Link to="/about">
-        <div className={classes.link}>About</div>
-      </Link>
-      <Link to="/contact">
-        <div className={classes.link}>Contact</div>
-      </Link>
-      <Link to="/projects">
-        <div className={classes.link}>Projects</div>
-      </Link>
-      <Link to="/resume">
-        <div className={classes.link}>Resume</div>
-      </Link>
-    </div>
-  </div>;
+  </div>
+);
 
 export default injectSheet(styles)(Header);
