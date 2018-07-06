@@ -23,7 +23,7 @@ const styles = {
       "reading projects projects resume"
     `
   },
-  "@media (max-width: 500px)": {
+  "@media (max-width: 700px)": {
     gridContainer: {
       display: "flex",
       flexDirection: "column"

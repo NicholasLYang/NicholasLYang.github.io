@@ -15,7 +15,7 @@ const styles = {
     gridArea: props => props.name,
     backgroundColor: props => (props.isDeactivated ? "#e8e8e8" : props.color)
   },
-  "@media (max-width: 500px)": {
+  "@media (max-width: 700px)": {
     HomeGridBlock: {
       width: "90%",
       marginBottom: "10px",
