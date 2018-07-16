@@ -4,6 +4,7 @@ import Fader from "./Fader";
 import { transitionRoute } from "../actions";
 import injectSheet from "react-jss";
 import HomeGridBlock from "./HomeGridBlock";
+import FillerBlock from './FillerBlock'
 
 const styles = {
   HomePage: {
@@ -11,19 +12,22 @@ const styles = {
   },
   gridContainer: {
     display: "grid",
-    minHeight: "600px",
+    minHeight: "800px",
     gridColumnGap: "50px",
     gridRowGap: "10px",
     paddingBottom: "5%",
     gridTemplateColumns: "auto auto auto auto",
-    gridTemplateRows: "auto auto auto",
+    gridTemplateRows: "auto auto auto auto auto",
     gridTemplateAreas: `
-      "about about contact resume"
-      "about about contact resume"
-      "reading projects projects resume"
+      "about about blank2 contact"
+      "about about blank2 contact"
+      "blank4 blank1 reading blank3"
+      "resume blank1 reading blank0"
+      "resume blank1 projects projects"
+
     `
   },
-  "@media (max-width: 700px)": {
+  "@media (max-width: 750px)": {
     gridContainer: {
       display: "flex",
       flexDirection: "column"
@@ -86,6 +90,12 @@ class HomePage extends Component {
                 setActiveBlock={this.setActiveBlock}
               />
             ))}
+            <FillerBlock name="blank0" />
+            <FillerBlock name="blank1" />
+            <FillerBlock name="blank2" />
+            <FillerBlock name="blank3" />
+            <FillerBlock name="blank4" />
+
           </div>
         </Fader>
       </div>

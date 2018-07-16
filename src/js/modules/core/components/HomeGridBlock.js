@@ -11,11 +11,11 @@ const styles = {
     justifyContent: "center",
     padding: "20px",
     transition: "background-color 1s",
-    color: props => props.isDeactivated ? "black" : "white",
+    color: props => (props.isDeactivated ? "black" : "white"),
     gridArea: props => props.name,
-    backgroundColor: props => (props.isDeactivated ? "#e8e8e8" : props.color)
+    backgroundColor: props => props.isDeactivated ? "#e8e8e8" : props.color
   },
-  "@media (max-width: 700px)": {
+  "@media (max-width: 750px)": {
     HomeGridBlock: {
       width: "90%",
       marginBottom: "10px",
