@@ -21,9 +21,9 @@ const styles = {
     gridTemplateAreas: `
       "about about blank2 contact"
       "about about blank2 contact"
-      "blank4 blank1 reading blank3"
-      "resume blank1 reading blank0"
-      "resume blank1 projects projects"
+      "blank4 blank1 resume blank3"
+      "reading blank1 resume blank0"
+      "reading blank1 projects projects"
 
     `
   },
