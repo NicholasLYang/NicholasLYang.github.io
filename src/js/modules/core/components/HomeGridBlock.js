@@ -5,7 +5,7 @@ import injectSheet from "react-jss";
 const styles = {
   HomeGridBlock: {
     width: "100%",
-    fontSize: "1.5em",
+    fontSize: "2em",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
