@@ -5,7 +5,7 @@ const styles = {
   resume: {
     padding: "50px",
     fontSize: "1.5em",
-    backgroundColor: "#320e3b",
+    backgroundColor: "#00cfc1",
     transition: "background-color 1s",
     fontVariant: "small-caps",
     color: "white",
