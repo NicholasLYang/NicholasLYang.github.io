@@ -49,17 +49,17 @@ const blocks = [
   {
     id: 3,
     name: "projects",
-    color: "#00cfc1"
+    color: "#320e3b",
   },
   {
     id: 4,
     name: "reading",
-    color: "#5cc8ff"
+    color: "#00cfc1"
   },
   {
     id: 5,
     name: "resume",
-    color: "#320e3b"
+    color: "#5cc8ff",
   }
 ];
 class HomePage extends Component {

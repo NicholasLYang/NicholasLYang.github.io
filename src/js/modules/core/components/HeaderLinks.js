@@ -10,7 +10,8 @@ const styles = {
     alignItems: "baseline",
     justifyContent: "flex-end",
     flex: "1 0 auto",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    fontVariant: "small-caps"
   },
   link: {
     padding: "10px",

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "./Link";
 import injectSheet from "react-jss";
-import { Route, Switch } from "react-router-dom";
 import HeaderLinks from "./HeaderLinks";
 
 const styles = {
