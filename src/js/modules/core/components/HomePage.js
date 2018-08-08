@@ -11,6 +11,7 @@ const styles = {
     width: "80%"
   },
   gridContainer: {
+    fontFamily: "'Source Sans Pro', Helvetica, sans-serif",
     display: "grid",
     minHeight: "800px",
     gridColumnGap: "50px",
@@ -44,22 +45,22 @@ const blocks = [
   {
     id: 2,
     name: "contact",
-    color: "#220901"
+    color: "#191923"
   },
   {
     id: 3,
     name: "projects",
-    color: "#320e3b",
+    color: "#f39237",
   },
   {
     id: 4,
     name: "reading",
-    color: "#00cfc1"
+    color: "#bf1363"
   },
   {
     id: 5,
     name: "resume",
-    color: "#5cc8ff",
+    color: "#0e79b2",
   }
 ];
 class HomePage extends Component {

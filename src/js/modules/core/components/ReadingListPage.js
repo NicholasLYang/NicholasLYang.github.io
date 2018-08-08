@@ -34,8 +34,6 @@ const styles = {
 
 const ReadingListPage = ({ classes }) => {
   const tabs = [
-    "https://eli.thegreenplace.net/2012/08/02/parsing-expressions-by-precedence-climbing",
-    "https://eli.thegreenplace.net/2009/03/20/a-recursive-descent-parser-with-an-infix-expression-evaluator/",
     "https://mikepawliuk.ca/2014/03/31/how-to-read-understand-and-study-proofs/",
     "http://frenchy64.github.io/papers/esop16-short.pdf",
     "https://www2.ccs.neu.edu/racket/pubs/popl08-thf.pdf",
@@ -63,13 +61,12 @@ const ReadingListPage = ({ classes }) => {
         </div>
         <h3 className={classes.section}>Currently Reading</h3>
         <ul>
-          <li> The Power and the Glory by Graham Greene </li>
+          <li> The Design of Everyday Things by Donald Norman </li>
           <li> Code Complete 2 by Steve McConnell </li>
           <li> Programming Rust by Jason Orendorff and Jim Blandy </li>
         </ul>
         <h3 className={classes.section}>On Deck</h3>
         <ul>
-          <li> The Design of Everyday Things by Donald Norman </li>
           <li>
             Haskell Programming from First Principles by Christopher Allen and
             Julie Moronuki
@@ -93,6 +90,7 @@ const ReadingListPage = ({ classes }) => {
         <ul>
           <li> Coders at Work by Peter Seibel </li>
           <li> The Quiet American by Graham Greene </li>
+          <li> The Power and the Glory by Graham Greene </li>
         </ul>
         <div className={classes.tabs}>
           <h4> Tabs </h4>

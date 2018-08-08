@@ -20,7 +20,7 @@ const styles = {
     justifyContent: "center",
     flex: "1 0 auto",
     flexDirection: "row",
-    fontFamily: "'Source Sans Pro', sans-serif",
+    fontFamily: "proxima-nova, sans-serif",
     fontSize: "1.25em",
     lineHeight: "1.5em"
   },

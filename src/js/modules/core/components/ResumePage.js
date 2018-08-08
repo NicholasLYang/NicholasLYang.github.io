@@ -3,9 +3,10 @@ import injectSheet from "react-jss";
 
 const styles = {
   resume: {
+    fontFamily: "'Source Sans Pro', sans-serif",
     padding: "50px",
     fontSize: "1.5em",
-    backgroundColor: "#00cfc1",
+    backgroundColor: "#0e79b2",
     transition: "background-color 1s",
     fontVariant: "small-caps",
     color: "white",

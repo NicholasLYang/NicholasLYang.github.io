@@ -14,9 +14,6 @@ const styles = {
     maxWidth: "500px",
     paddingDown: "5%"
   },
-  title: {
-    fontVariant: "small-caps",
-  },
   headshotContainer: {
     flex: "1",
     flexShrink: "2",

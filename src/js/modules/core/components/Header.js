@@ -14,13 +14,14 @@ const styles = {
     margin: "5%",
     marginTop: "0",
     marginBottom: "2%",
-    fontFamily: "'Source Sans Pro', serif",
+    fontFamily: "proxima-nova, sans-serif",
     "&:hover": {
       textDecorationColor: "black"
     }
   },
   masthead: {
     flexGrow: "2",
+    fontWeight: "500",
     fontSize: "4em",
     textDecoration: "none",
     color: "black"

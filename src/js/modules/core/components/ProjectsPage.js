@@ -1,22 +1,33 @@
 import React from "react";
 import Fader from "./Fader";
 import injectSheet from "react-jss";
+import Project from "./ProjectContainer";
 
 const styles = {
-  warning: {
-    padding: "25px"
-  },
-  projectRow: {
+  ProjectsPage: {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "column"
   }
 };
-const ProjectsPage = ({ classes }) =>
+
+const projects = [
+  {
+    name: "The Stuyvesant Spectator",
+    image: "/images/projects/stuyspec.png"
+  },
+  {
+    name: "Fashion Tree",
+    image: "/images/projects/fashion-tree.png"
+  }
+];
+const ProjectsPage = ({ classes }) => (
   <Fader>
-      <div className={classes.warning}>
-      Still under construction. Please check out my {" "}
-      <a href="https://github.com/NicholasLYang">GitHub</a>  for now.
-      </div>
-  </Fader>;
+    <div className={classes.ProjectsPage}>
+    {projects.map(({ image, name }) => (
+      <Project image={image} name={name} />
+    ))}
+    </div>
+  </Fader>
+);
 
 export default injectSheet(styles)(ProjectsPage);

@@ -1,31 +1,37 @@
-import React from "react"
-import injectSheet from "react-jss"
+import React from "react";
+import injectSheet from "react-jss";
 
 const styles = {
-  image: {
-    "&:hover": {
-      opacity: "0.5",
-      transition: "opacity 0.5s"
-    },
-    "&:hover $imageText": {
-      transition: "opacity 0.5s",
-      opacity: "1"
-    }
+  Project: {
+    position: "relative",
+    textAlign: "center",
+    color: "black",
+    padding: "20px"
   },
-  imageText: {
-    opacity: "0",
+  image: {
+    transition: "filter 1s",
+    filter: props => props.isActive ? "opacity(40%) saturate(60%)" : "none"
+  },
+  name: {
+    fontSize: "4em",
+    fontWeight: "500",
+    transition: "opacity 1s",
+    opacity: props => (props.isActive ? 1 : 0),
+    lineHeight: "1.4em",
     color: "black",
     position: "absolute",
-    top: "65%",
-    left: "35%",
+    top: "50%",
+    left: "50%",
     transform: "translate(-50%, -50%)"
   }
-}
-const Project = ({ classes, image }) => (
-  <div className={classes.image}>
-    <img src={image} />
-    <h1 className={classes.imageText}> Fashion Tree </h1>
-  </div>
-)
+};
+const Project = ({ classes, name, image }) => {
+  return (
+    <div className={classes.Project}>
+      <img src={image} className={classes.image} />
+      <div className={classes.name}> {name} </div>
+    </div>
+  );
+};
 
 export default injectSheet(styles)(Project);
