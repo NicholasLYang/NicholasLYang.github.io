@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import injectSheet from "react-jss";
 import Project from "./Project";
-
-const styles = {
-  ProjectContainer: {}
-};
 
 class ProjectContainer extends Component {
   constructor(props) {
@@ -23,17 +18,15 @@ class ProjectContainer extends Component {
   };
 
   render() {
-    const { image, classes, name } = this.props;
     return (
       <div
-        className={classes.ProjectContainer}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
-        <Project name={name} isActive={this.state.isActive} image={image} />
+        <Project isActive={this.state.isActive} {...this.props} />
       </div>
     );
   }
 }
 
-export default injectSheet(styles)(ProjectContainer);
+export default ProjectContainer;

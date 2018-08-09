@@ -6,11 +6,13 @@ const styles = {
     position: "relative",
     textAlign: "center",
     color: "black",
-    padding: "20px"
+    backgroundColor: props => props.color,
+    lineHeight: "0",
+    margin: "20px",
   },
   image: {
-    transition: "filter 1s",
-    filter: props => props.isActive ? "opacity(40%) saturate(60%)" : "none"
+    transition: "filter 0.25s",
+    filter: props => props.isActive ? "opacity(40%)" : "none"
   },
   name: {
     fontSize: "4em",
