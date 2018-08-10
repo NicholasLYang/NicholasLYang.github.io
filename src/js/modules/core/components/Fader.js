@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 
 const styles = {
   fadedComponent: {
-    width: "100%",
     opacity: props => props.opacity,
     transition: `opacity ${FADE_DURATION}ms`
   }

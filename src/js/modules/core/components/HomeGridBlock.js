@@ -11,7 +11,7 @@ const styles = {
     justifyContent: "center",
     fontVariant: "small-caps",
     padding: "20px",
-    transition: "background-color 1s",
+    transition: "background-color 0.75s",
     color: props => (props.isDeactivated ? "black" : "white"),
     gridArea: props => props.name,
     backgroundColor: props => props.isDeactivated ? "#e8e8e8" : props.color

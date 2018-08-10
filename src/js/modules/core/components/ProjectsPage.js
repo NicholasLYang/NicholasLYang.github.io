@@ -1,7 +1,9 @@
 import React from "react";
 import Fader from "./Fader";
 import injectSheet from "react-jss";
-import ProjectContainer from "./ProjectContainer";
+import ProjectPreview from "./ProjectPreview";
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 
 const styles = {
   ProjectsPage: {
@@ -12,32 +14,21 @@ const styles = {
   }
 };
 
-const projects = [
-  {
-    name: "The Stuyvesant Spectator",
-    image: "/images/projects/stuyspec.png",
-    color: "#f15025"
-  },
-  {
-    name: "Fashion Tree",
-    image: "/images/projects/fashion-tree.png",
-    color: "#A1D2CE"
-  },
-  {
-    name: "Ruby Google Summer of Code",
-    image: "/images/projects/gsoc.png",
-    color: "#78CAD2"
-  },
-];
-
-const ProjectsPage = ({ classes }) => (
+const ProjectsPage = ({ classes, projects }) => (
   <Fader>
     <div className={classes.ProjectsPage}>
     {projects.map(project => (
-      <ProjectContainer {...project} />
+      <ProjectPreview key={project.slug} {...project} />
     ))}
     </div>
   </Fader>
 );
 
-export default injectSheet(styles)(ProjectsPage);
+const mapStateToProps = state => ({
+  projects: Object.values(state.core.projects)
+})
+
+export default compose(
+  injectSheet(styles),
+  connect(mapStateToProps)
+)(ProjectsPage);

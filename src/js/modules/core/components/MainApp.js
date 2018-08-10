@@ -33,7 +33,6 @@ const styles = {
 class MainApp extends PureComponent {
   render() {
     const { classes, location } = this.props;
-    console.log(location);
     return (
       <div>
         <div className={classes.mainWrapper}>

@@ -11,6 +11,7 @@ import MainApp from "./core/components/MainApp";
 import ConnectedRouter from "react-router-redux/ConnectedRouter";
 import store from "../store";
 import ReadingListPage from './core/components/ReadingListPage'
+import Project from './core/components/Project'
 
 class RoutingApp extends Component {
   render() {
@@ -21,7 +22,8 @@ class RoutingApp extends Component {
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
-            <Route path="/projects" component={ProjectsPage} />
+            <Route path="/projects/:slug" component={Project} />
+            <Route exact path="/projects" component={ProjectsPage} />
             <Route path="/reading" component={ReadingListPage} />
             <Route path="/resume" component={ResumePage} />
           </MainApp>

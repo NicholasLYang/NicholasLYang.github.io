@@ -9,7 +9,7 @@ const styles = {
   }
 };
 
-const Link = ({ classes, children, to, transitionRoute, ...props }) =>
+const Link = ({ classes, sheet, children, to, transitionRoute, ...props }) =>
   <a
     href={to}
     onClick={event => {
