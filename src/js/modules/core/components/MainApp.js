@@ -3,11 +3,14 @@ import connect from "react-redux/lib/connect/connect";
 import injectSheet from "react-jss";
 import { withRouter } from "react-router-dom";
 import Header from "./Header";
+import MondrianIcon from "./MondrianIcon"
+import ReactIcon from './ReactIcon'
 
 const styles = {
   mainWrapper: {
     minHeight: "100%",
-    margin: "0px auto"
+    margin: "0px auto",
+    fontFamily: "proxima-nova, sans-serif",
   },
   contentWrapper: {
     maxWidth: "720px",
@@ -20,13 +23,15 @@ const styles = {
     justifyContent: "center",
     flex: "1 0 auto",
     flexDirection: "row",
-    fontFamily: "proxima-nova, sans-serif",
     fontSize: "1.25em",
     lineHeight: "1.5em"
   },
   appFooter: {
+    display: "flex",
     height: "40px",
-    textAlign: "center"
+    alignItems: "center",
+    justifyContent: "center",
+    paddingBottom: "5px"
   },
 };
 
@@ -38,6 +43,7 @@ class MainApp extends PureComponent {
         <div className={classes.mainWrapper}>
           <Header isHome={location === "/"}/>
           <div className={classes.mainContent}>{this.props.children}</div>
+          <div className={classes.appFooter}> Made with <ReactIcon/> Inspired by <MondrianIcon /></div>
         </div>
       </div>
     );

@@ -61,7 +61,7 @@ const ReadingListPage = ({ classes }) => {
         </div>
         <h3 className={classes.section}>Currently Reading</h3>
         <ul>
-          <li> The Design of Everyday Things by Donald Norman </li>
+          <li> How To Solve It by George Polya </li>
           <li> Code Complete 2 by Steve McConnell </li>
           <li> Programming Rust by Jason Orendorff and Jim Blandy </li>
         </ul>
@@ -88,9 +88,10 @@ const ReadingListPage = ({ classes }) => {
         </ul>
         <h3 className={classes.finished}>Finished</h3>
         <ul>
-          <li> Coders at Work by Peter Seibel </li>
-          <li> The Quiet American by Graham Greene </li>
+          <li> The Design of Everyday Things by Donald Norman </li>
           <li> The Power and the Glory by Graham Greene </li>
+          <li> The Quiet American by Graham Greene </li>
+          <li> Coders at Work by Peter Seibel </li>
         </ul>
         <div className={classes.tabs}>
           <h4> Tabs </h4>
