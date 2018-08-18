@@ -3,14 +3,15 @@ import connect from "react-redux/lib/connect/connect";
 import injectSheet from "react-jss";
 import { withRouter } from "react-router-dom";
 import Header from "./Header";
-import MondrianIcon from "./MondrianIcon"
-import ReactIcon from './ReactIcon'
+import MondrianIcon from "./MondrianIcon";
+import ReactIcon from "./ReactIcon";
+import { refreshWindowDimensions } from './../actions'
 
 const styles = {
   mainWrapper: {
     minHeight: "100%",
     margin: "0px auto",
-    fontFamily: "proxima-nova, sans-serif",
+    fontFamily: "proxima-nova, sans-serif"
   },
   contentWrapper: {
     maxWidth: "720px",
@@ -32,18 +33,30 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     paddingBottom: "5px"
-  },
+  }
 };
 
 class MainApp extends PureComponent {
+  onResizeWindow = () => {
+    this.props.onResizeWindow();
+  };
+  componentDidMount() {
+    window.addEventListener("resize", this.onResizeWindow);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResizeWindow);
+  }
   render() {
     const { classes, location } = this.props;
     return (
       <div>
         <div className={classes.mainWrapper}>
-          <Header isHome={location === "/"}/>
+          <Header isHome={location === "/"} />
           <div className={classes.mainContent}>{this.props.children}</div>
-          <div className={classes.appFooter}> Made with <ReactIcon/> Inspired by <MondrianIcon /></div>
+          <div className={classes.appFooter}>
+            {" "}
+            Made with <ReactIcon /> Inspired by <MondrianIcon />
+          </div>
         </div>
       </div>
     );
@@ -54,7 +67,11 @@ const VisibleMainApp = connect(
   state => ({
     location: state.router.location.pathname
   }),
-  null
+  dispatch => ({
+    onResizeWindow: () => {
+      dispatch(refreshWindowDimensions());
+    }
+  })
 )(injectSheet(styles)(MainApp));
 
 export default withRouter(VisibleMainApp);

@@ -12,8 +12,13 @@ export const transitionRoute = route => (dispatch, getState) => {
     delay(FADE_DURATION + TRANSITION_PADDING).then(() => {
       dispatch({
         type: t.FINISH_FADING_ROUTE
-      })
+      });
       dispatch(push(route));
     });
   }
 };
+
+export const refreshWindowDimensions = () => ({
+  type: t.REFRESH_WINDOW_DIMENSIONS,
+  payload: {}
+});
