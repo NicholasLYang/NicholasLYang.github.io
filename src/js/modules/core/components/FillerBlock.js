@@ -12,7 +12,7 @@ const styles = {
     backgroundColor:  "#e8e8e8",
     gridArea: props => props.name,
   },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 800px)": {
     FillerBlock: {
       display: "none"
     }

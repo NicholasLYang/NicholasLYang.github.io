@@ -9,7 +9,7 @@ const styles = {
     opacity: props => props.opacity,
     transition: `opacity ${FADE_DURATION}ms`
   },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 800px)": {
     fadedComponent: {
       width: "100%",
     }

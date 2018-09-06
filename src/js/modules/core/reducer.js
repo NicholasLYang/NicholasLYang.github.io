@@ -30,7 +30,8 @@ const initialState = {
       slug: "gsoc-2018",
       image: "/images/projects/gsoc.png",
       color: "#f15025",
-      description: "Added type annotations to Ruby interpreter.",
+      description: "Added type annotations to Ruby interpreter. Read, mapped and attempted to "+
+      "understand 11k+ LOC parser. Used Bison, C and some Ruby.",
       urls: [
         {
           name: "Blog Post",
@@ -49,7 +50,11 @@ const initialState = {
       color: "#A1D2CE",
       description:
         "Designed, implemented and deployed a new website for the Stuyvesant " +
-        "Spectator, using React, Redux, Ruby on Rails and Go. Deployed site on " +
+        "Spectator. Included a front end application written in React, an "+
+        "GraphQL API written in Rails and a command line uploader written in Go. "+
+        "Supervised and trained a team of 5 developers, teaching all of "+
+        "them the necessary technologies as well as modern software development "+
+        "techniques. Code reviewed over 10k lines of code. Deployed site on " +
         "AWS with a CircleCI pipeline.",
       urls: [
         {
@@ -70,14 +75,15 @@ const initialState = {
       description:
         "A website that helps find eco friendly clothing. " +
         "Scrapes online clothing stores and gives each piece of clothing an" +
-        " ecological rank based on material composition. Built using Ruby on Rails.",
+        " ecological rank based on material composition. Built using Ruby on "+
+        "Rails. Won Sustainability and Social Impact prize at HackNYU 2017",
       urls: [
         {
           name: "GitHub Repo",
           url: "https://github.com/nicholaslyang/fashion-tree"
         }
       ]
-    }
+    },
   }
 };
 

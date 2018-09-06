@@ -8,6 +8,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    paddingLeft: "5%",
     paddingBottom: "100px"
   },
   name: {
@@ -21,35 +22,53 @@ const styles = {
     flexDirection: "row",
     justifyContent: "center"
   },
-  description: {
+  text: {
     padding: "40px",
-    maxWidth: "600px"
+    maxWidth: "40%"
   },
   image: {
-    width: "90%",
+    flexGrow: "2",
+    display: "block",
+    width: "auto",
     height: "auto",
     boxShadow: "0px 2px 10px rgba(0,0,0,0.2)"
   },
   links: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column"
   },
   linksHeader: {
     margin: "0",
     marginTop: "40px"
   },
-  "@media (max-width 1300px)": {
-    content: {
-      flexWrap: "wrap"
-    }
-  },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 1300px)": {
+    image: {
+      width: "80%"
+    },
     content: {
       flexDirection: "column"
     },
+    text: {
+      display: "flex",
+      maxWidth: "70%"
+    },
+    links: {
+      paddingLeft: "40px"
+    },
+    description: {
+      width: "80%"
+    }
+  },
+  "@media (max-width: 750px)": {
     name: {
       padding: "10px",
       fontSize: "1.5em"
+    },
+    text: {
+      maxWidth: "80%"
+    },
+    content: {
+      alignItems: "center"
     }
   }
 };
@@ -60,8 +79,10 @@ const Project = ({ classes, project }) => {
       <h1 className={classes.name}> {project.name} </h1>
       <div className={classes.content}>
         <img className={classes.image} src={project.image} />
-        <div className={classes.description}>
+        <div className={classes.text}>
+          <div className={classes.description}>
           {project.description}
+          </div>
           <div className={classes.links}>
             <h2 className={classes.linksHeader}> Links </h2>
             <ul>

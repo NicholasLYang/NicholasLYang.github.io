@@ -12,7 +12,7 @@ const styles = {
     alignItems: "flex-start",
     width: "90%"
   },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 800px)": {
     ProjectsPage: {
       alignItems: "center"
     }
@@ -22,9 +22,10 @@ const styles = {
 const ProjectsPage = ({ classes, projects }) => (
   <div className={classes.ProjectsPage}>
     <Fader>
-      {projects.map(project => (
-        <ProjectPreview key={project.slug} {...project} />
-      ))}
+      {projects.map(project => {
+        console.log(project);
+        return <ProjectPreview key={project.slug} {...project} />
+      })}
     </Fader>
   </div>
 );

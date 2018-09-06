@@ -28,7 +28,7 @@ const styles = {
 
     `
   },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 800px)": {
     gridContainer: {
       display: "flex",
       flexDirection: "column"

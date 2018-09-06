@@ -19,7 +19,7 @@ const styles = {
     filter: props => (props.isActive ? "opacity(40%)" : "none")
   },
   name: {
-    opacity: props => (props.isActive || props.viewportWidth < 750 ? 1 : 0),
+    opacity: props => (props.isActive || props.viewportWidth < 800 ? 1 : 0),
     fontSize: "4em",
     fontWeight: "500",
     transition: "opacity 1s",
@@ -30,7 +30,7 @@ const styles = {
     left: "50%",
     transform: "translate(-50%, -50%)"
   },
-  "@media (max-width: 750px)": {
+  "@media (max-width: 800px)": {
     Project: {
       display: "flex",
       alignItems: "center",
