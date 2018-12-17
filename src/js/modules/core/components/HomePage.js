@@ -4,7 +4,7 @@ import Fader from "./Fader";
 import { transitionRoute } from "../actions";
 import injectSheet from "react-jss";
 import HomeGridBlock from "./HomeGridBlock";
-import FillerBlock from './FillerBlock'
+import FillerBlock from "./FillerBlock";
 
 const styles = {
   HomePage: {
@@ -50,7 +50,7 @@ const blocks = [
   {
     id: 3,
     name: "projects",
-    color: "#f39237",
+    color: "#f39237"
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const blocks = [
   {
     id: 5,
     name: "resume",
-    color: "#0e79b2",
+    color: "#0e79b2"
   }
 ];
 class HomePage extends Component {
@@ -96,7 +96,6 @@ class HomePage extends Component {
             <FillerBlock name="blank2" />
             <FillerBlock name="blank3" />
             <FillerBlock name="blank4" />
-
           </div>
         </Fader>
       </div>
@@ -107,4 +106,7 @@ class HomePage extends Component {
 const mapDispatchToProps = dispatch => ({
   transitionRoute: route => dispatch(transitionRoute(route))
 });
-export default connect(null, mapDispatchToProps)(injectSheet(styles)(HomePage));
+export default connect(
+  null,
+  mapDispatchToProps
+)(injectSheet(styles)(HomePage));

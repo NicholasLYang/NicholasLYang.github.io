@@ -46,7 +46,8 @@ const ReadingListPage = ({ classes }) => {
     "https://ia802309.us.archive.org/25/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf",
     "http://cs.brown.edu/courses/cs173/2012/book/book.pdf",
     "http://www.cs.nott.ac.uk/~pszgmh/pearl.pdf",
-    "http://www.cs.cmu.edu/%7Erwh/pfpl/2nded.pdf"
+      "http://www.cs.cmu.edu/%7Erwh/pfpl/2nded.pdf",
+      "http://lambda-the-ultimate.org/node/4170#comment-63836"
   ];
   return (
     <Fader>

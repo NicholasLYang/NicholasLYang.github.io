@@ -54,7 +54,6 @@ class MainApp extends PureComponent {
           <Header isHome={location === "/"} />
           <div className={classes.mainContent}>{this.props.children}</div>
           <div className={classes.appFooter}>
-            {" "}
             Made with <ReactIcon /> Inspired by <MondrianIcon />
           </div>
         </div>

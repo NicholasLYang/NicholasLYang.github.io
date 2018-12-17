@@ -10,6 +10,7 @@ const styles = {
     transition: "background-color 1s",
     fontVariant: "small-caps",
     color: "white",
+    marginBottom: "18px",
     "&:hover": {
       backgroundColor: "white",
       color: "black"
