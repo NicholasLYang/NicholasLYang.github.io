@@ -8,16 +8,16 @@ import FillerBlock from "./FillerBlock";
 
 const styles = {
   HomePage: {
-    width: "80%"
+    width: "65vw"
   },
   gridContainer: {
     fontFamily: "'Source Sans Pro', Helvetica, sans-serif",
     display: "grid",
-    minHeight: "800px",
+    height: "75vh",
     gridColumnGap: "50px",
     gridRowGap: "10px",
     paddingBottom: "5%",
-    gridTemplateColumns: "auto auto auto auto",
+    gridTemplateColumns: "auto 10% auto auto",
     gridTemplateRows: "auto auto auto auto auto",
     gridTemplateAreas: `
       "about about blank2 contact"
@@ -25,7 +25,6 @@ const styles = {
       "blank4 blank1 resume blank3"
       "reading blank1 resume blank0"
       "reading blank1 projects projects"
-
     `
   },
   "@media (max-width: 800px)": {

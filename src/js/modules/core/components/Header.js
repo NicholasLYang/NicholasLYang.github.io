@@ -13,7 +13,7 @@ const styles = {
     flex: "1 0 auto",
     margin: "5%",
     marginTop: "0",
-    marginBottom: "2%",
+    marginBottom: "1%",
     fontFamily: "proxima-nova, sans-serif",
     "&:hover": {
       textDecorationColor: "black"
@@ -22,7 +22,7 @@ const styles = {
   masthead: {
     flexGrow: "2",
     fontWeight: "500",
-    fontSize: "4em",
+    fontSize: "3em",
     textDecoration: "none",
     color: "black"
   },
