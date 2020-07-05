@@ -54,17 +54,16 @@ const AboutPage: React.FC<WithStyles<typeof styles>> = ({ classes }) => (
         A native New Yorker. I attended Stuyvesant High School and graduated in
         2016.
       </p>
-
       <p>
         A developer with experience in JavaScript (ES6), React, Redux, Ruby on
         Rails, TypeScript, Rust, and{" "}
-        <a href="https://github.com/NicholasLYang">more</a>.
+        <a href="https://github.com/NicholasLYang">more</a>. I will be interning at Cloudflare in the fall.
       </p>
 
       <p>
         A programming language nerd. I'm obsessed with learning new programming
-        languages, such as Rust, Haskell, OCaml and Scheme. My goal is to design
-        my own language in the near future.
+        languages, such as Rust, Haskell, OCaml and Scheme. I've been tinkering
+        with my own programming language, <a href="https://github.com/NicholasLYang/saber"> Saber </a>
       </p>
       <p>
         A food lover. I love searching out good, inexpensive food. I also love

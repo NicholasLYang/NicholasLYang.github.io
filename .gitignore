@@ -4,3 +4,5 @@ dist/prod/**
 node_modules
 builds/**
 .idea
+.DS_Store
+build/
