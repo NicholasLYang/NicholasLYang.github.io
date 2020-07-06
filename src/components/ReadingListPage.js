@@ -26,9 +26,6 @@ const styles = {
       paddingLeft: "20px",
       paddingRight: "20px"
     },
-    tabs: {
-      display: "none"
-    }
   }
 };
 
@@ -84,14 +81,14 @@ const ReadingListPage = ({ classes }) => {
           <li> The Quiet American by Graham Greene </li>
           <li> Coders at Work by Peter Seibel </li>
         </ul>
-        <div className={classes.tabs}>
-          <h4> Programming Languages Links </h4>
+        <div>
+          <h4> Movies </h4>
           <ul>
-            {programmingLanguagesLinks.map((tab, index) => (
-              <li key={index}>
-                <a href={tab}> {tab} </a>
-              </li>
-            ))}
+            <li> Vertigo dir. Alfred Hitchcock </li>
+            <li> Ivan's Childhood dir. Andrei Tarkovsky </li>
+            <li> Aguirre, the Wrath of God dir. Werner Herzog </li>
+            <li> Chungking Express dir. Wong Kar-wai </li>
+            <li> A Man Escaped dir. Robert Bresson </li>
           </ul>
         </div>
       </div>
