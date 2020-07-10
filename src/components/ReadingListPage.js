@@ -84,6 +84,8 @@ const ReadingListPage = ({ classes }) => {
         <div>
           <h4> Movies </h4>
           <ul>
+            <li> La Jetée dir. Chris Marker </li>
+            <li> Blow Up dir. Michelangelo Antonioni </li>
             <li> Vertigo dir. Alfred Hitchcock </li>
             <li> Ivan's Childhood dir. Andrei Tarkovsky </li>
             <li> Aguirre, the Wrath of God dir. Werner Herzog </li>
