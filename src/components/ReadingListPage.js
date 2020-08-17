@@ -84,6 +84,12 @@ const ReadingListPage = ({ classes }) => {
         <div>
           <h4> Movies </h4>
           <ul>
+            <li> Love and Anarchy dir. Lina Wertmüller </li>
+            <li> Eternal Sunshine of the Spotless Mind dir. Michel Gondry </li>
+            <li> Being John Malkovich dir. Spike Jonze </li>
+            <li> Le Samouraï dir. Jean-Pierre Melville </li>
+            <li> Sans Soleil dir. Chris Marker </li>
+            <li> Down By Law dir. Jim Jarmusch </li>
             <li> La Jetée dir. Chris Marker </li>
             <li> Blow Up dir. Michelangelo Antonioni </li>
             <li> Vertigo dir. Alfred Hitchcock </li>
