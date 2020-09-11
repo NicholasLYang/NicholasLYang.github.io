@@ -55,9 +55,8 @@ const ReadingListPage = ({ classes }) => {
         <div className={classes.description}>
           These are the books that I'm currently reading or planning to read.
           Hopefully by keeping a list, I can be both more organized and more
-          disciplined with my reading. Also, there's a list of articles and
-          websites that I inevitable accumulate in my tabs (not visible on
-          mobile).
+          disciplined with my reading. There's also a list of movies that I've
+          watched.
         </div>
         <h3 className={classes.section}>Currently Reading</h3>
         <ul>
@@ -72,6 +71,7 @@ const ReadingListPage = ({ classes }) => {
         </ul>
         <h3 className={classes.finished}>Finished</h3>
         <ul>
+          <li> Pattern Recognition by William Gibson </li>
           <li> The Years That Matter Most by Paul Tough </li>
           <li> The Man Who Solved The Market by Gregory Zuckerman </li>
           <li> The Sympathizer by Viet Thanh Nguyen </li>
@@ -84,6 +84,13 @@ const ReadingListPage = ({ classes }) => {
         <div>
           <h4> Movies </h4>
           <ul>
+            <li> The Player dir. Robert Altman </li>
+            <li> Da 5 Bloods dir. Spike Lee </li>
+            <li> The Terrorizers dir. Edward Yang </li>
+            <li> I'm Thinking of Ending Things dir. Charlie Kaufman </li>
+            <li> The Passenger dir. Michelangelo Antonioni </li>
+            <li> Pickpocket dir. Robert Bresson </li>
+            <li> Adaptation dir. Spike Jonze </li>
             <li> Love and Anarchy dir. Lina Wertmüller </li>
             <li> Eternal Sunshine of the Spotless Mind dir. Michel Gondry </li>
             <li> Being John Malkovich dir. Spike Jonze </li>
