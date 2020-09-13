@@ -72,6 +72,7 @@ const ReadingListPage = ({ classes }) => {
         <h3 className={classes.finished}>Finished</h3>
         <ul>
           <li> Pattern Recognition by William Gibson </li>
+          <li> Ayiti by Roxane Gay </li>
           <li> The Years That Matter Most by Paul Tough </li>
           <li> The Man Who Solved The Market by Gregory Zuckerman </li>
           <li> The Sympathizer by Viet Thanh Nguyen </li>
@@ -84,6 +85,8 @@ const ReadingListPage = ({ classes }) => {
         <div>
           <h4> Movies </h4>
           <ul>
+            <li> Close-Up dir. Abbas Kiarostami </li>
+            <li> Wanda dir. Barbara Loden </li>
             <li> The Player dir. Robert Altman </li>
             <li> Da 5 Bloods dir. Spike Lee </li>
             <li> The Terrorizers dir. Edward Yang </li>
