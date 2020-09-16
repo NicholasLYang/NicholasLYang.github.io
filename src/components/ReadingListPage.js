@@ -30,24 +30,6 @@ const styles = {
 };
 
 const ReadingListPage = ({ classes }) => {
-  const programmingLanguagesLinks = [
-    "http://frenchy64.github.io/papers/esop16-short.pdf",
-    "https://www2.ccs.neu.edu/racket/pubs/popl08-thf.pdf",
-    "http://willcrichton.net/notes/gradual-programming/",
-    "https://github.com/apple/swift/blob/master/docs/Generics.rst",
-    "https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md",
-    "http://homepages.inf.ed.ac.uk/wadler/",
-    "https://ia802309.us.archive.org/25/items/pdfy-MgN0H1joIoDVoIC7/The_AWK_Programming_Language.pdf",
-    "http://cs.brown.edu/courses/cs173/2012/book/book.pdf",
-    "http://www.cs.nott.ac.uk/~pszgmh/pearl.pdf",
-      "http://www.cs.cmu.edu/%7Erwh/pfpl/2nded.pdf",
-      "http://lambda-the-ultimate.org/node/4170#comment-63836",
-    "http://theory.stanford.edu/~barrett/pubs/KHI+19.pdf",
-    "https://eli.thegreenplace.net/2019/go-compiler-internals-adding-a-new-statement-to-go-part-1/",
-    "https://kristoff.it/blog/what-is-zig-comptime/",
-    "https://swift.org/blog/new-diagnostic-arch-overview/",
-    "https://github.com/apple/swift/blob/master/docs/TypeChecker.rst"
-  ];
   return (
     <Fader>
       <div className={classes.ReadingListPage}>
@@ -85,6 +67,7 @@ const ReadingListPage = ({ classes }) => {
         <div>
           <h4> Movies </h4>
           <ul>
+	    <li> Varda by Agnès dir. Agnès Varda </li>
             <li> Close-Up dir. Abbas Kiarostami </li>
             <li> Wanda dir. Barbara Loden </li>
             <li> The Player dir. Robert Altman </li>
