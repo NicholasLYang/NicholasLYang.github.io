@@ -12,7 +12,7 @@
     "@types/react-router-dom": "^5.1.0",
     "@types/redux-logger": "^3.0.7",
     "connected-react-router": "^6.5.2",
-    "history": "latest",
+    "history": "^5.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-jss": "^10.0.0",

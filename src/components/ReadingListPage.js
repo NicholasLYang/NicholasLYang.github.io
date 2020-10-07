@@ -66,7 +66,11 @@ const ReadingListPage = ({ classes }) => {
         </ul>
         <div>
           <h4> Movies </h4>
-          <ul>
+            <ul>
+            <li> Taipei Story dir. Edward Yang </li>
+            <li> Mother dir. Bong Joon-ho </li>
+            <li> Dust In The Wind dir. Hou Hsiao-Hsien </li>
+            <li> La ciénaga dir. Lucrecia Martel </li>
 	    <li> Varda by Agnès dir. Agnès Varda </li>
             <li> Close-Up dir. Abbas Kiarostami </li>
             <li> Wanda dir. Barbara Loden </li>
