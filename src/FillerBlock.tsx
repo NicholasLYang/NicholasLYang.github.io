@@ -1,7 +1,7 @@
 import React from "react";
-import injectSheet from "react-jss";
+import {createUseStyles} from "react-jss";
 
-const styles = {
+const useStyles = createUseStyles({
   FillerBlock: {
     width: "100%",
     fontSize: "1.5em",
@@ -10,19 +10,20 @@ const styles = {
     justifyContent: "center",
     padding: "20px",
     backgroundColor:  "#e8e8e8",
-    gridArea: props => props.name,
+    gridArea: name => name,
   },
   "@media (max-width: 800px)": {
     FillerBlock: {
       display: "none"
     }
   }
-};
+});
 
-const FillerBlock = ({ classes }) => {
+const FillerBlock = ({ name }: { name: string }) => {
+  const classes = useStyles(name);
   return (
     <div className={classes.FillerBlock} />
   )
 }
 
-export default injectSheet(styles)(FillerBlock);
+export default FillerBlock;

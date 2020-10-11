@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "./Link";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import HeaderLinks from "./HeaderLinks";
+import { Link } from "react-router-dom";
 
-const styles = {
+const useStyles = createUseStyles({
   mainHeader: {
     display: "flex",
     flexDirection: "column",
@@ -16,36 +16,39 @@ const styles = {
     marginBottom: "1%",
     fontFamily: "proxima-nova, sans-serif",
     "&:hover": {
-      textDecorationColor: "black"
-    }
+      textDecorationColor: "black",
+    },
   },
   masthead: {
     flexGrow: "2",
     fontWeight: "500",
     fontSize: "3em",
     textDecoration: "none",
-    color: "black"
+    color: "black",
   },
   "@media (max-width: 500px)": {
     masthead: {
-      fontSize: "2.5em"
+      fontSize: "2.5em",
     },
     routes: {
       justifyContent: "center",
-      maxWidth: "300px"
-    }
-  }
+      maxWidth: "300px",
+    },
+  },
+});
+
+const Header = ({ isHome }: { isHome: boolean }) => {
+  const classes = useStyles();
+  return (
+    <div className={classes.mainHeader}>
+      <div>
+        <Link to="/">
+          <h1 className={classes.masthead}>Nicholas Yang</h1>
+        </Link>
+        {!isHome && <HeaderLinks />}
+      </div>
+    </div>
+  );
 };
 
-const Header = ({ classes, isHome }) => (
-  <div className={classes.mainHeader}>
-    <div>
-      <Link to="/">
-        <h1 className={classes.masthead}>Nicholas Yang</h1>
-      </Link>
-      {!isHome && <HeaderLinks />}
-    </div>
-  </div>
-);
-
-export default injectSheet(styles)(Header);
+export default Header;

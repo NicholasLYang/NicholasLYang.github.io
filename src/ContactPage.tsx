@@ -1,15 +1,16 @@
 import React from "react";
-import Fader from "./Fader";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 
-const styles = {
+const useStyles = createUseStyles({
   Contact: {
     paddingBottom: "100px",
-    lineHeight: "1.8em"
+    lineHeight: "1.8em",
   },
-}
-const ContactPage = ({ classes }) =>
-  <Fader>
+});
+
+const ContactPage = () => {
+  const classes = useStyles();
+  return (
     <div className={classes.Contact}>
       <h2> Contact </h2>
       <div> nick@nicholasyang.com</div>
@@ -17,12 +18,13 @@ const ContactPage = ({ classes }) =>
         <a href="https://github.com/NicholasLYang"> GitHub </a>
       </div>
       <div>
-        <a href="https://linkedin.com/in/nicholaslyang"> LinkedIn  </a>
+        <a href="https://linkedin.com/in/nicholaslyang"> LinkedIn </a>
       </div>
       <div>
         <a href="https://devpost.com/NicholasLYang"> DevPost </a>
       </div>
     </div>
-  </Fader>;
+  );
+};
 
-export default injectSheet(styles)(ContactPage);
+export default ContactPage;

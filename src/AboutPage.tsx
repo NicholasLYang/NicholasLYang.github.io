@@ -1,10 +1,9 @@
 import React from "react";
-import injectSheet, {WithStyles} from "react-jss";
-import headshot from "../images/headshot.jpg"
-import Fader from "./Fader";
-import Link from "./Link";
+import { createUseStyles } from "react-jss";
+import headshot from "./headshot.jpeg";
+import { Link } from "react-router-dom";
 
-const styles = {
+const useStyles = createUseStyles({
   about: {
     display: "flex",
     fontSize: "1.1em",
@@ -13,35 +12,35 @@ const styles = {
     flexWrap: "wrap",
     alignItems: "flex-start",
     maxWidth: "500px",
-    paddingDown: "5%"
+    paddingDown: "5%",
   },
   headshotContainer: {
     flex: "1",
-    flexShrink: "2",
-    maxWidth: "100%",
-    minWidth: "50%"
+      display: "flex",
+      justifyContent: "center"
   },
   headshot: {
-    maxWidth: "100%",
-    objectFit: "contain"
+    maxWidth: "min(400px, 75vw)",
+    objectFit: "contain",
   },
   title: {
     fontWeight: "400",
-    fontSize: "2em"
+    fontSize: "2em",
   },
   iam: {
-    fontWeight: "400"
+    fontWeight: "400",
   },
   "@media (max-width: 500px)": {
     about: {
       paddingLeft: "50px",
-      paddingRight: "50px"
-    }
-  }
-};
+      paddingRight: "50px",
+    },
+  },
+});
 
-const AboutPage: React.FC<WithStyles<typeof styles>> = ({ classes }) => (
-  <Fader>
+const AboutPage: React.FC = () => {
+  const classes = useStyles();
+  return (
     <div className={classes.about}>
       <h2 className={classes.title}> About </h2>
       <div className={classes.headshotContainer}>
@@ -57,13 +56,15 @@ const AboutPage: React.FC<WithStyles<typeof styles>> = ({ classes }) => (
       <p>
         A developer with experience in JavaScript (ES6), React, Redux, Ruby on
         Rails, TypeScript, Rust, and{" "}
-        <a href="https://github.com/NicholasLYang">more</a>. I will be interning at Cloudflare in the fall.
+        <a href="https://github.com/NicholasLYang">more</a>. I will be interning
+        at Cloudflare in the fall.
       </p>
 
       <p>
         A programming language nerd. I'm obsessed with learning new programming
         languages, such as Rust, Haskell, OCaml and Scheme. I've been tinkering
-        with my own programming language, <a href="https://github.com/NicholasLYang/saber"> Saber </a>
+        with my own programming language,{" "}
+        <a href="https://github.com/NicholasLYang/saber"> Saber </a>
       </p>
       <p>
         A food lover. I love searching out good, inexpensive food. I also love
@@ -75,16 +76,16 @@ const AboutPage: React.FC<WithStyles<typeof styles>> = ({ classes }) => (
         <Link to="/contact">Contact me</Link> if interested
       </p>
       <p>
-        A film lover. Some of my favorite films include Badlands, Ida, The
-        Third Man and Pather Panchali.
+        A film lover. Some of my favorite films include Badlands, Ida, The Third
+        Man and Pather Panchali.
       </p>
 
       <p>
-        An avid traveler. I've been to 20 countries, and hope to go to many
+        An avid traveler. I've been to 21 countries, and hope to go to many
         more.
       </p>
     </div>
-  </Fader>
-);
+  );
+};
 
-export default injectSheet(styles)(AboutPage);
+export default AboutPage;

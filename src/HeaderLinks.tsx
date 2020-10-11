@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "./Link";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
 
-const styles = {
+const useStyles = createUseStyles({
   routes: {
     display: "flex",
     flexDirection: "row",
@@ -11,16 +11,17 @@ const styles = {
     justifyContent: "flex-end",
     flex: "1 0 auto",
     flexWrap: "wrap",
-    fontVariant: "small-caps"
+    fontVariant: "small-caps",
   },
   link: {
     padding: "10px",
     fontSize: "1.45em",
-    color: "black"
-  }
-};
+    color: "black",
+  },
+});
 
-const HeaderLinks = ({ classes }) => {
+const HeaderLinks = () => {
+  const classes = useStyles();
   return (
     <div className={classes.routes}>
       <Link to="/about">
@@ -42,4 +43,4 @@ const HeaderLinks = ({ classes }) => {
   );
 };
 
-export default injectSheet(styles)(HeaderLinks);
+export default HeaderLinks;

@@ -1,7 +1,7 @@
 import React from "react";
-import injectSheet from "react-jss";
+import {createUseStyles} from "react-jss";
 
-const styles = {
+const useStyles = createUseStyles({
   resume: {
     fontFamily: "'Source Sans Pro', sans-serif",
     padding: "50px",
@@ -16,13 +16,17 @@ const styles = {
       color: "black"
     }
   }
-};
-const ResumePage = ({ classes }) => (
-  <a href="/resume.pdf">
-    <div className={classes.resume}>
-      <div className={classes.resumeText}> Download Resume </div>{" "}
-    </div>
-  </a>
-);
+});
 
-export default injectSheet(styles)(ResumePage);
+const ResumePage = () => {
+  const classes = useStyles()
+  return (
+      <a href="/resume.pdf">
+        <div className={classes.resume}>
+          <div> Download Resume </div>
+        </div>
+      </a>
+  );
+}
+
+export default ResumePage;
