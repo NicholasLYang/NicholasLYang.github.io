@@ -67,6 +67,7 @@ const ReadingListPage = () => {
       <div>
         <h4> Movies </h4>
         <ul>
+          <li> Fallen Angels dir. Wong Kar-wai </li>
           <li> Inside Llewyn Davis dir. Joel and Ethan Coen </li>
           <li> The Headless Woman dir. Lucrecia Martel </li>
           <li> The Master dir. Paul Thomas Anderson </li>
